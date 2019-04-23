@@ -1,0 +1,122 @@
+/*
+ * A simple set of mixins for CSS
+ * Made by JP Casabianca
+*/
+
+@import 'vars';
+
+/**
+ * Animation shorcut for CSS
+*/
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+/**
+ * Border-radius shorcut for CSS
+*/
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	   -moz-border-radius:$radius;
+	    -ms-border-radius:$radius;
+	     -o-border-radius:$radius;
+	        border-radius:$radius;
+}
+
+/**
+ * Single Border Radius shorcut for CSS
+*/
+@mixin single-border-radius($radius, $where, $side) {
+  -webkit-border-#{$where}-#{$side}-radius:$radius;
+     -moz-border-#{$where}-#{$side}-radius:$radius;
+      -ms-border-#{$where}-#{$side}-radius:$radius;
+       -o-border-#{$where}-#{$side}-radius:$radius;
+          border-#{$where}-#{$side}-radius:$radius;
+}
+
+/**
+ * Box Shadow shorcut for CSS
+*/
+@mixin box_shadow($x, $y, $spread, $color) {
+	-webkit-box-shadow:$x $y $spread $color;
+	   -moz-box-shadow:$x $y $spread $color;
+	    -ms-box-shadow:$x $y $spread $color;
+	     -o-box-shadow:$x $y $spread $color;
+	        box-shadow:$x $y $spread $color;
+}
+
+/**
+ * Transform shorcut for CSS
+*/
+@mixin transform($degrees) {
+  -webkit-transform:rotate($degrees);
+     -moz-transform:rotate($degrees);
+      -ms-transform:rotate($degrees);
+       -o-transform:rotate($degrees);
+          transform:rotate($degrees);
+}
+
+/**
+ * Transitions shorcut for CSS
+*/
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/**
+ * Flex Property Mixin
+*/
+@mixin flex($args...) {
+  -webkit-flex: $args;
+  -moz-flex: $args;
+  -ms-flex: $args;
+  -o-flex: $args;
+  flex: $args;
+}
+
+/**
+ * Media Queries
+*/
+@mixin mq_sm {
+    @media (min-width: $mq_sm_endpoint) {
+        @content;
+    }
+}
+
+@mixin mq_md {
+    @media (min-width: $mq_md_endpoint) {
+        @content;
+    }
+}
+
+@mixin mq_lg {
+    @media (min-width: $mq_lg_endpoint) {
+        @content;
+    }
+}
+
+@mixin mq_xl {
+    @media (min-width: $mq_xl_endpoint) {
+        @content;
+    }
+}
+
+@mixin mq_2xl {
+    @media (min-width: $mq_2xl_endpoint) {
+        @content;
+    }
+}
+
+@mixin mq_3xl {
+    @media (min-width: $mq_3xl_endpoint) {
+        @content;
+    }
+}
