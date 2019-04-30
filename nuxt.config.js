@@ -29,22 +29,36 @@ export default {
    */
   css: [
     '~/assets/css/tailwind.css',
+    '~/assets/css/prism.css',
     '~/assets/fonts/style.css',
-    '~/assets/sass/style.scss'
+    '~/assets/sass/style.scss',
+    '~/assets/icons/style.css'
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/vue-prism', ssr: false }
+  ],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
+  /*
+   ** Style Resources Load
+   */
+  styleResources: {
+    scss: [
+      'assets/sass/helpers/_mixins.scss',
+      'assets/sass/helpers/_vars.scss'
+    ]
+  },
   /*
    ** Axios module configuration
    */

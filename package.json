@@ -13,12 +13,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "vue-click-outside": "^1.0.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
+    "@nuxtjs/style-resources": "^0.1.2",
     "autoprefixer": "^8.6.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
@@ -38,6 +40,7 @@
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "tailwindcss": "^0.7.0"
+    "tailwindcss": "^0.7.0",
+    "vue-prism": "^1.0.5"
   }
 }

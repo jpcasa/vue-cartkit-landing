@@ -1,0 +1,49 @@
+@import "../helpers/vars";
+
+body {
+  font-family: $font-circular-book;
+  font-weight: normal;
+  color: #8795A1;
+  @apply bg-grey-lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-circular-medium;
+  font-weight: normal;
+  color: #12283A;
+}
+
+.title {
+  font-family: $font-circular-medium;
+}
+
+a {
+  transition: 0.3s all;
+  text-decoration: none;
+  color: #8795A1;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.page {
+  @apply p-6;
+}
+
+.page-title {
+  @apply mb-3;
+}
+
+.page-subtitle {
+  @apply mb-3;
+}
+
+pre {
+  @apply rounded-lg;
+}
