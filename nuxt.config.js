@@ -39,7 +39,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/vue-prism', ssr: false }
+    { src: '~/plugins/vue-prism', ssr: false },
+    { src: '~/plugins/vue-clipboard2' },
+    { src: '~/plugins/v-tooltip' }
   ],
 
   /*

@@ -34,6 +34,10 @@ a {
 
 .page {
   @apply p-6;
+
+  @include mq_md {
+    @apply p-12;
+  }
 }
 
 .page-title {
@@ -46,4 +50,75 @@ a {
 
 pre {
   @apply rounded-lg;
+}
+
+.component-docs {
+  @apply max-w-3xl mx-auto;
+
+  .docs-section {
+    @apply mb-10;
+
+    .docs-card {
+      .card-footer {
+        .footer-code {
+          @apply pt-4 block;
+        }
+
+        .icon {
+          @apply cursor-pointer text-lg;
+
+          &:hover {
+            @apply text-blue;
+          }
+        }
+      }
+    }
+  }
+
+  h1,
+  h3 {
+    @apply mb-3;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-enter-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: ease-in;
+   -webkit-transition-timing-function: ease-in;
+   -o-transition-timing-function: ease-in;
+   transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to, .slide-leave {
+   max-height: 100px;
+   overflow: hidden;
+}
+
+.slide-enter, .slide-leave-to {
+   overflow: hidden;
+   max-height: 0;
 }
