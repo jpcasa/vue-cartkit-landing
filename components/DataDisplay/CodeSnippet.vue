@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="ck-code-snippet">
-    <pre><code class="language-js">{{ snippet }}</code></pre>
+    <pre><code :class="`language-${lang}`">{{ snippet }}</code></pre>
     <div class="copy" @click="doCopy()">
       <span>copy</span>
       <transition name="fade">
@@ -19,6 +19,12 @@ export default {
       type: String,
       default: () => {
         return ''
+      }
+    },
+    lang: {
+      type: String,
+      default: () => {
+        return 'js'
       }
     }
   },
@@ -47,8 +53,9 @@ export default {
 .ck-code-snippet {
   @apply relative;
 
-  code {
-    @apply text-sm;
+  code,
+  pre {
+    @apply text-xs;
   }
 
   .copy {

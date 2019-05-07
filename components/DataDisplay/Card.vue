@@ -87,7 +87,7 @@ export default {
       left: 1.3rem;
       border: none;
       text-transform: capitalize;
-      @apply absolute p-0 px-3 bg-white;
+      @apply absolute p-0 px-3 bg-white text-sm;
     }
   }
 }

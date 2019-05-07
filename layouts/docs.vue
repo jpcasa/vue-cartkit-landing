@@ -137,7 +137,8 @@ export default {
 <style lang="scss" scoped>
 .layout-content {
   width: calc(100% - 15rem);
-  @apply fixed pin-t pin-r h-screen overflow-y-scroll z-10 mt-16;
+  height: calc(100vh - 4rem);
+  @apply fixed pin-t pin-r overflow-y-scroll z-10 mt-16;
 }
 
 .content-full {
